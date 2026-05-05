@@ -1,0 +1,105 @@
+/* ======== GOOGLE FONT ========= */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ===== VARIABLE CSS ========= */
+:root{
+  --orange-color:#f08b07;
+  --white-color:rgb(250, 243, 243);
+
+
+  --heading-font:"inter";
+  --first-font: "barlow condensed";
+
+  --title-size:4rem;
+  --semi-title-size:2.5rem;
+  --big-size:1.3rem;
+  --small-size:1.2rem;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(223, 222, 219);
+  
+}
+
+.section{
+box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+}
+
+/* ================== HERO SECTION =================== */
+
+.main{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.hero-section{
+  height: 90vh;
+  width: 96%;
+
+  display: flex;
+  
+  
+  align-items: center;
+  margin-top: 3%;
+  gap: 2%;
+  background-color: var(--white-color);
+  
+  
+}
+.hero-left-shape,
+.hero-right-shape{
+  height: 40%;
+  width: 5%;
+  background-color: var(--orange-color);
+}
+.hero-left-div{
+flex: 1;
+}
+.hero-right-div{
+flex: 1;
+}
+.section-title{
+  font-family: var(--heading-font);
+  margin: 1.5rem;
+}
+.hero-title-1{
+display: inline-block;
+font-size: var(--semi-title-size);
+margin-left: 0.3rem;
+color: var(--orange-color);
+border-bottom: 5px solid var(--orange-color) ;
+}
+
+
+.hero-title-2{
+  font-size: var(--title-size);
+}
+.hero-title-3{
+  font-size: var(--big-size);
+}
+.hero-title-4{
+  font-size: var(--big-size);
+}
+.hero-para{
+  font-family: var(--first-font);
+  margin: 1.5rem;
+  font-size: var(--small-size);
+}
+
+.hero-button{
+  font-family: var(--heading-font);
+  font-size: var(--big-size);
+  background-color: black;
+  color: var(--white-color);
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 30px;
+  margin-left: 1.5rem;
+}
