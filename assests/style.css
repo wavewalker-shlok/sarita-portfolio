@@ -371,3 +371,70 @@ html{
 .photography_para{
   font-family: var(--first-font);
 }
+
+/* =========== RESUME ==================== */
+
+.resume_section{
+  display: flex;
+}
+
+.resume_right{
+  height: 100%;
+  width: 80%;
+  
+}
+.resume_right h1{
+  margin-left: 4rem ;
+  margin-top: 2rem ;
+}
+
+.resume_content h3{
+  margin-left: 4rem;
+}
+
+
+.resume_education{
+  margin-left: 4rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  gap: 1rem;
+}
+
+.education_card-1,
+.education_card-2,
+.education_card-3{
+  
+  font-family: var(--first-font);
+  font-size: var(--small-size);
+  
+
+}
+.education_card-1 h4,
+.education_card-2 h4,
+.education_card-3 h4{
+ 
+  margin: 4px;
+  padding: 5px;
+  background-color: black;
+  color: var(--white-color);
+  display: inline-block;
+  border-radius: 5px;
+  font-family: var(--heading-font);
+
+}
+
+.resume_content h3{
+  font-family: var(--heading-font);
+  display: inline-block;
+  padding: 8px;
+  background-color: var(--orange-color);
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+/* ========= PROJECTS ============ */
+.project_section{
+  background-color: var(--greyy-color);
+  display: flex;
+}

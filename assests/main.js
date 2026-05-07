@@ -1,31 +1,81 @@
 const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
+const statsSection = document.querySelector(".stats");
 
-  const target = +counter.getAttribute("data-target");
+let started = false;
 
-  const suffix = counter.dataset.suffix || "";
+const startCounters = () => {
 
-  let count = 0;
+  counters.forEach(counter => {
 
-  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
 
-    const increment = target / 100;
+    const suffix = counter.dataset.suffix || "";
 
-    if(count < target){
+    let count = 0;
 
-      count += increment;
+    const updateCounter = () => {
 
-      counter.innerText = Math.ceil(count) + suffix;
+      const increment = target / 100;
 
-      requestAnimationFrame(updateCounter);
+      if(count < target){
 
-    } else {
+        count += increment;
 
-      counter.innerText = target + suffix;
+        counter.innerText = Math.ceil(count) + suffix;
+
+        requestAnimationFrame(updateCounter);
+
+      } else {
+
+        counter.innerText = target + suffix;
+      }
+    };
+
+    updateCounter();
+  });
+};
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting && !started){
+
+      startCounters();
+
+      started = true;
     }
-  };
+  });
 
-  updateCounter();
+}, {
+  threshold: 0.5
+});
 
+observer.observe(statsSection);const buttons = document.querySelectorAll(".portfolio-buttons button");
+
+const cards = document.querySelectorAll(".project-card");
+
+buttons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const filter = button.dataset.filter;
+
+    cards.forEach(card => {
+
+      if(filter === "all"){
+
+        card.style.display = "block";
+
+      } else if(card.classList.contains(filter)){
+
+        card.style.display = "block";
+
+      } else {
+
+        card.style.display = "none";
+      }
+    });
+  });
 });
